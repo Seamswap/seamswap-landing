@@ -1,118 +1,233 @@
+/* eslint-disable @next/next/no-img-element */
+import * as React from 'react';
+import Container from '@src/components/ui/Container';
+import Link from 'next/link';
+import WalletAdd from '@src/components/icons/WalletAdd.icon';
+import FeaturesSection from '@src/components/molecule/FeaturesSection';
+import Input from '@src/components/ui/Input';
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    return (
+        <>
+            <Container className="hero">
+                <div className="grid md:grid-cols-2 gap-x-5 gap-y-4">
+                    <div
+                        className="left p-6 lg:p-8 lg:pt-12 pb-12 bg-[#00B8A1] rounded-[20px] relative overflow-hidden">
+                        <div className="content lg:w-[92%] text-grey-960 z-10 relative">
+                            <div
+                                className="px-[16px] py-[9px] mb-5 bg-grey-960 rounded-[100px] justify-center items-center inline-flex">
+                                <span className="text-[#ccfff8] text-sm">Built on Seamless Protocol</span>
+                            </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+                            <h1 className="text-4xl xl:text-[54px] xl:leading-[58px] font-[700] mb-4 max-w-[400px]">
+                                Seamlessly swap between ILM positions
+                            </h1>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                            <p className="lg:text-[18px] max-w-[400px] mb-5">
+                                Enabling faster Integrated Liquidity Market (ILM) strategy position swaps
+                                with less transaction fee on Seamless Protocol.
+                            </p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+                            <Link
+                                href={'https://beta.seamswap.com'}
+                                target='_blank'
+                                className="bg-grey-960 px-6 py-3 gap-x-3 rounded-md text-white inline-flex items-center"
+                            >
+                                <WalletAdd className=""/>
+                                <span className="">Launch app</span>
+                            </Link>
+                        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                        <div
+                            className="bgElement absolute right-0 bottom-0 w-[74px] lg:w-[20%] xl:lg:w-[27%] max-w-[180px]">
+                            <HeroBgElement/>
+                        </div>
+                    </div>
+
+                    <div className="right rounded-[22px] border-primary overflow-hidden">
+                        <Image
+                            priority
+                            fetchPriority="high"
+                            width={601 * 2}
+                            height={612 * 2}
+                            src="/img/heroImage.png"
+                            className="w-full h-full object-cover"
+                            alt="HeroImg"
+                        />
+                    </div>
+                </div>
+            </Container>
+
+            <Container className="mt-6">
+                <div className="banner1 bg-grey-960 rounded-[20px] relative overflow-hidden">
+                    <div className="content stats px-6 py-14 text-white">
+                        <div className="item">
+                            <b>3+</b>
+                            <span>ILM Strategies</span>
+                        </div>
+
+                        <div className="item">
+                            <b>100+%</b>
+                            <span>Distributed in rewards</span>
+                        </div>
+
+                        <div className="item">
+                            <b>Solid</b>
+                            <span>Secured and tested protocol</span>
+                        </div>
+
+                        <div className="item">
+                            <b>12</b>
+                            <span>Streams of earning</span>
+                        </div>
+                    </div>
+                </div>
+            </Container>
+
+            <Container className="mt-6">
+                <FeaturesSection/>
+            </Container>
+
+            <Container className="mt-6">
+                <div
+                    id="newsletter"
+                    className="banner1 bg-grey-960 rounded-[20px] relative overflow-hidden"
+                >
+                    <div className="content px-6 lg:px-8 py-14 md:w-[80%] lg:w-[64%] text-white relative z-10">
+                        <h3 className="text-3xl md:text-5xl xl:text-[44px] md:!leading-[55px] font-semibold mb-2">
+                            Stay updated on what we’re building.
+                        </h3>
+
+                        <p>Sign up to our newsletter.</p>
+
+                        <div className="mt-5 items-center gap-3 inline-flex">
+                            <Input
+                                className="bg-white text-white px-4 py-3 text-base rounded-[10px] w-full xl:min-w-[380px]"
+                                placeholder="Enter your email address"
+                            />
+
+                            <div
+                                className="bg-[#ccfff8] py-2.5 px-4 rounded-[10px] justify-center items-center gap-2.5 inline-flex">
+                                <span className="text-[#001f1b] font-medium lg:text-lg">Subscribe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="bgElement absolute right-2 lg:right-10 bottom-0 w-[120px] md:w-[40%]">
+                        <NewsletterBgElement className=""/>
+                    </div>
+                </div>
+            </Container>
+        </>
+    );
 }
+
+const HeroBgElement = () => (
+    <svg
+        className="w-full"
+        viewBox="0 0 189 389"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <rect
+            x="1.29904"
+            y="0.75"
+            width="169.133"
+            height="332.606"
+            transform="matrix(0.866025 -0.5 0 1 0.174038 86.7162)"
+            stroke="#001F1B"
+            strokeWidth={3}
+            strokeDasharray="6 6"
+        />
+        <rect
+            x="1.29904"
+            y="0.75"
+            width="169.133"
+            height="332.606"
+            transform="matrix(0.866025 -0.5 0 1 60.801 107.286)"
+            fill="#00B8A1"
+            stroke="#001F1B"
+            strokeWidth={3}
+            strokeDasharray="6 6"
+        />
+        <rect
+            x="1.29904"
+            y="0.75"
+            width="63.6314"
+            height="192.717"
+            transform="matrix(0.866025 -0.5 0 1 106.27 150.886)"
+            fill="#00B8A1"
+            stroke="#001F1B"
+            strokeWidth={3}
+            strokeDasharray="6 6"
+        />
+        <path
+            d="M1.62402 87.1493L62.7909 107.719"
+            stroke="#001F1B"
+            strokeWidth={3}
+            strokeDasharray="6 6"
+        />
+        <path
+            d="M148.316 1.6239L208.942 22.1933"
+            stroke="#001F1B"
+            strokeWidth={3}
+            strokeDasharray="6 6"
+        />
+    </svg>
+);
+
+const NewsletterBgElement = ({className}: { className?: string }) => (
+    <svg
+        className={'w-full ' + className}
+        viewBox="0 0 539 289"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <rect
+            x="1.4388"
+            y="1.07592"
+            width="395.209"
+            height="436.001"
+            transform="matrix(0.959202 -0.282722 0 1 1.0587 112.989)"
+            stroke="#CCFFF9"
+            stroke-width="3"
+            stroke-dasharray="6 6"
+        />
+        <rect
+            x="1.4388"
+            y="1.07592"
+            width="395.209"
+            height="436.001"
+            transform="matrix(0.959202 -0.282722 0 1 156.397 139.896)"
+            fill="#001F1B"
+            stroke="#CCFFF9"
+            stroke-width="3"
+            stroke-dasharray="6 6"
+        />
+        <rect
+            x="1.4388"
+            y="1.07592"
+            width="151.143"
+            height="253.014"
+            transform="matrix(0.959202 -0.282722 0 1 272.902 196.929)"
+            fill="#001F1B"
+            stroke="#CCFFF9"
+            stroke-width="3"
+            stroke-dasharray="6 6"
+        />
+        <path
+            d="M5.16211 113.999L161.888 140.905"
+            stroke="#CCFFF9"
+            stroke-width="3"
+            stroke-dasharray="6 6"
+        />
+        <path
+            d="M381.025 2.12415L536.365 29.0306"
+            stroke="#CCFFF9"
+            stroke-width="3"
+            stroke-dasharray="6 6"
+        />
+    </svg>
+);
