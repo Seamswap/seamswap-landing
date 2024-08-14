@@ -13,24 +13,29 @@ export default function App({ Component, pageProps }: AppProps) {
 					content='Seamlessly swap between ILM positions with Seamless Protocol. Enable faster ILM strategy position swaps with reduced transaction fees.'
 					key='desc'
 				/>
-				{/* Meta tags for SEO */}
-				<meta property='og:title' content='Seamswap' key='title' />
+
+				{/* Facebook Meta Tags */}
+				<meta property='og:url' content='https://www.seamswap.com' />
+				<meta property='og:type' content='website' />
+				<meta property='og:title' content='Seamswap' />
 				<meta
 					property='og:description'
 					content='Seamlessly swap between ILM positions with Seamless Protocol. Enable faster ILM strategy position swaps with reduced transaction fees.'
 				/>
-				<meta property='og:image' content='/seamswap.png' />
-				<meta property='og:type' content='website' />
-				<meta name='twitter:card' content='summary' />
+				<meta property='og:image' content='https://seamswap.com/seamswap.png' />
+
+				{/* Twitter Meta Tags */}
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta property='twitter:domain' content='seamswap.com' />
+				<meta property='twitter:url' content='https://www.seamswap.com' />
 				<meta name='twitter:title' content='Seamswap' />
 				<meta
 					name='twitter:description'
 					content='Seamlessly swap between ILM positions with Seamless Protocol. Enable faster ILM strategy position swaps with reduced transaction fees.'
 				/>
-				<meta name='twitter:image' content='/seamswap.png' />
-				<meta name='twitter:site' content='@seamswap' />
-				<meta name='twitter:creator' content='@seamswap' />
-				
+				<meta name='twitter:image' content='https://seamswap.com/seamswap.png' />
+
+				{/* Favicon */}
 				<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
 				<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
 				<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
